@@ -80,7 +80,7 @@ enum Day {
     Sunday
   }
 
-const getType = (day: Day) : string => {
+const getDayType = (day: Day) : string => {
     if(day === Day.Sunday){
         return `Weekend ^-^`
     }
