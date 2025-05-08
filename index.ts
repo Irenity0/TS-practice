@@ -26,7 +26,7 @@ class Vehicle {
         this.year = year
     }
     getInfo() {
-        console.log(`Make: ${this.make}, Year: ${this.year}`);
+        return `Make: ${this.make}, Year: ${this.year}`
     }
 }
 
@@ -37,7 +37,7 @@ class Car extends Vehicle {
         this.model = model
     }
     getModel() {
-        console.log(`Model: ${this.model}`);
+        return `Model: ${this.model}`
     }
 }
 
@@ -82,17 +82,17 @@ enum Day {
 
 const getDayType = (day: Day) : string => {
     if(day === Day.Sunday){
-        return `Weekend ^-^`
+        return `Weekend`
     }
     else {
-        return `Weekday ;-;`
+        return `Weekday`
     }
 }
 
 const squareAsync = async(n: number) : Promise<number> => {
     return new Promise((resolve, reject) => {
         if(n < 0){
-            reject("Negative number is not allowed you dum")
+            reject("Negative number is not allowed")
         }
         else {
             setTimeout(()=>resolve(n*n),1000)
