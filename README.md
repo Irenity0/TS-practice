@@ -1,8 +1,8 @@
 ## Blog 1: Using union and intersection types in TypeScript.
 ### Union Types (`|`)
 
-Union types allow a variable to hold more than one possible type.
-Syntax: `type1 | type2`
+Hey there! Today we'll learn about an interesting type in TypeScript, Union!. Union types allow a variable to hold more than one possible type.
+This is what the syntax looks like: `type1 | type2`
 
 Example:
 ```typescript
@@ -23,8 +23,8 @@ function printId(id: string | number) {
 
 ### Intersection Types (`&`)
 
-Intersection types combine multiple types into one, meaning the value must satisfy all types.
-Syntax: `type1 & type2`
+And now we will look at a brief definition & exmaple of INtersection. Intersection types combine multiple types into one, meaning the value must satisfy all types.
+The syntax: `type1 & type2`
 Example:
 
 ```typescript
@@ -57,7 +57,7 @@ function display(worker: Person & Employee) {
 ------------------
 
 ## Blog 2: What is the Use of the keyof Keyword in TypeScript?
-The keyof keyword in TypeScript is used to get a union of all property names (keys) of a type.
+Ever wondered why we the "Keyof" kewyord in Typescript The keyof keyword in TypeScript is used to get a union of all property names (keys) of a type.
 
 It lets you work with keys in a type-safe way.
 
