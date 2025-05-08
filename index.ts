@@ -1,4 +1,4 @@
-const formatString = (input: string, toUpper: boolean = true ) : string => {
+function formatString(input: string, toUpper: boolean = true): string {
     if(toUpper){
         return input.toUpperCase()
     }
@@ -7,12 +7,12 @@ const formatString = (input: string, toUpper: boolean = true ) : string => {
     }
 }
 
-const filterByRating = (items: { title: string; rating: number }[]): { title: string; rating: number }[] => {
+function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
     const filteredArr = items.filter(item => item.rating >= 4)
     return filteredArr
 }
 
-const concatenateArrays = <T>(...arrays : T[][]) : T[] => {
+function concatenateArrays<T>(...arrays: T[][]): T[] {
     let arr : T[] = []
     arrays.forEach(item => arr = arr.concat(item))
     return arr
@@ -41,7 +41,7 @@ class Car extends Vehicle {
     }
 }
 
-const processValue = (input: string | number) : number => {
+function processValue(input: string | number): number {
     if(typeof input === 'string'){
         return input.length
     }
@@ -54,8 +54,8 @@ interface Product {
     name: string;
     price: number;
   }
-
-const getMostExpensiveProduct = (products: Product[]): Product | null => {
+  
+  function getMostExpensiveProduct(products: Product[]): Product | null {
     if(products.length === 0) {
         return null
     }
@@ -68,7 +68,7 @@ const getMostExpensiveProduct = (products: Product[]): Product | null => {
         })
         return expensiveProduct
     }
-}
+  }
 
 enum Day {
     Monday,
@@ -80,16 +80,19 @@ enum Day {
     Sunday
   }
 
-const getDayType = (day: Day) : string => {
+  function getDayType(day: Day): string {
     if(day === Day.Sunday){
+        return `Weekend`
+    }
+    else if(day === Day.Saturday) {
         return `Weekend`
     }
     else {
         return `Weekday`
     }
-}
+  }
 
-const squareAsync = async(n: number) : Promise<number> => {
+  async function squareAsync(n: number): Promise<number> {
     return new Promise((resolve, reject) => {
         if(n < 0){
             reject("Negative number is not allowed")
@@ -98,4 +101,4 @@ const squareAsync = async(n: number) : Promise<number> => {
             setTimeout(()=>resolve(n*n),1000)
         }
     })
-}
+  }
