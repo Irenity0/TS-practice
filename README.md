@@ -56,7 +56,7 @@ function display(worker: Person & Employee) {
 
 ------------------
 
-What is the Use of the keyof Keyword in TypeScript?
+## Blog 2: What is the Use of the keyof Keyword in TypeScript?
 The keyof keyword in TypeScript is used to get a union of all property names (keys) of a type.
 
 It lets you work with keys in a type-safe way.
